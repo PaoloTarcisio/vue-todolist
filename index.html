@@ -23,6 +23,14 @@
     <body>
 
         <div id="app">
+
+            <div class="add">
+                <input type="text" v-model="newTodo" placeholder="Inserisci la nuova task:">
+                <button @click="add()">
+                    Aggiungi
+                </button>
+            </div>
+
             <ul>
                 <li
                 v-for = "(todo, i) in todos"
@@ -31,6 +39,10 @@
                 }"
                 >
                     {{ todo.text }}
+
+                    <button @click="remove(i)">
+                        X
+                    </button>
                 </li>
             </ul>
         </div>
