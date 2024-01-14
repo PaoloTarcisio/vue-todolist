@@ -19,3 +19,6 @@ img {
     GENERAL
 */
 
+.done {
+    text-decoration: line-through;
+}
